@@ -209,5 +209,63 @@ pre, code { background: #CCC }
     margin: 0 auto;
 }
 
+.garden {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(10rem, 1fr));
+    justify-items: center;
+    align-items: center;
+}
+
+.garden div {
+    background: chocolate;
+}
+
+.plant {
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.plant.seed {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #C5E8B7;
+}
+
+.plant.bud {
+    position: relative;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: #ABE098;
+}
+
+.plant.bud::before, .plant.bud::after {
+    position: absolute;
+    bottom: 40%;
+    width: 0.6rem;
+    height: 1.2rem;
+    background: black;
+    content: '';
+}
+
+.plant.bud::before { left: 0.6rem }
+.plant.bud::after { right: 0.6rem }
+
+.plant.bloom {
+    position: relative;
+    width: 3.6rem;
+    height: 3.6rem;
+    background: #83D475;
+}
+
+.plant.flower {
+    position: relative;
+    width: 4.8rem;
+    height: 4.8rem;
+    background: #57C84D;
+}
+
+/* #2EB62C */
+
 /* Messages and Notices
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
