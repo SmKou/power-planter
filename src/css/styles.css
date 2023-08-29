@@ -206,6 +206,7 @@ pre, code { background: #CCC }
 
 /* skeleton: container */ main {
     width: 100%;
+    height: 100vh;
     margin: 0 auto;
 }
 
@@ -218,7 +219,13 @@ pre, code { background: #CCC }
 }
 
 .garden div {
+    width: 100%;
+    height: 100%;
+    border: 0.1rem solid maroon;
     background: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .plant {
@@ -227,15 +234,15 @@ pre, code { background: #CCC }
 }
 
 .plant.seed {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 2.4rem;
+    height: 2.4rem;
     background: #C5E8B7;
 }
 
 .plant.bud {
     position: relative;
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 3.6rem;
+    height: 3.6rem;
     background: #ABE098;
 }
 
@@ -244,6 +251,7 @@ pre, code { background: #CCC }
     bottom: 40%;
     width: 0.6rem;
     height: 1.2rem;
+    border-radius: 50%;
     background: black;
     content: '';
 }
@@ -253,15 +261,15 @@ pre, code { background: #CCC }
 
 .plant.bloom {
     position: relative;
-    width: 3.6rem;
-    height: 3.6rem;
+    width: 4.8rem;
+    height: 4.8rem;
     background: #83D475;
 }
 
 .plant.flower {
     position: relative;
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 6rem;
+    height: 6rem;
     background: #57C84D;
 }
 
