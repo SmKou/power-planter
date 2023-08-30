@@ -1,20 +1,21 @@
 // import './css/fonts.css';
 // import './css/styles.css';
-const { red_plant, feedPlant, feed } = require('./plant');
+const { pink_plant, red_plant, maroon_plant, feed } = require('./plant');
 
 // Refer variables from .env => ${process.env.varName}
 
 const a = red_plant("A$$word");
-
 console.log(a);
-console.log(b);
-console.log(c);
+console.log("a eats", a.feed());
+console.log(a);
+const b = feed(a);
+const c = feed(b);
+console.log("feed a", a, c);
+const d = a.feed();
+const e = d.feed();
+console.log("a feeds", a, e);
 
-const a_fed = feed(a);
-console.log(a_fed);
-
-const a_caneat = feedPlant(feed)(a_fed);
-console.log(a_caneat);
-
-const a_fed2 = a_caneat.feed();
-console.log(a_fed2);
+const i = pink_plant;
+console.log("pink", i);
+const n = maroon_plant;
+console.log("maroon", n);

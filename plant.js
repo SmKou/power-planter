@@ -1,4 +1,4 @@
-const { changeState } = require('./state');
+const { stateControl, changeState } = require('./state');
 
 
 // const blueFood = changeState("soil")(5);
@@ -58,16 +58,17 @@ const red_plant = name => {
     const state = { name }
     return {
         ...state,
-        ...feedPlant(feed),
-        ...hydratePlant(pureWater),
-        ...giveLightToPlant(directLight)
+        ...feedPlant(feed)(state)
     }
 };
 
+const pink_plant = stateControl(feed);
+const maroon_plant = stateControl(feedPlant(feed));
+
 module.exports = {
+    pink_plant,
     red_plant,
-    blue_plant,
-    green_plant,
+    maroon_plant,
     feedPlant,
     feed
 }
