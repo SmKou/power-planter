@@ -1,6 +1,6 @@
 const storeState = () => {
     let currentState = {};
-    return (stateChangeFunction) => {
+    return (stateChangeFunction = state => state) => {
         const newState = stateChangeFunction(currentState);
         currentState = { ...newState };
         return newState;
@@ -13,7 +13,7 @@ const changeState = (prop) => (value) => (state) => ({
     [prop]: (state[prop] || 0) + value
 });
 
-export {
+module.exports = {
     stateControl,
     changeState
 }

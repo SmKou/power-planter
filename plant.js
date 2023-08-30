@@ -1,4 +1,4 @@
-import { stateControl, changeState } from "./state";
+const { stateControl, changeState } = require('./state');
 
 const feed = changeState("soil")(1);
 const blueFood = changeState("soil")(5);
@@ -12,14 +12,11 @@ const givelight = changeState("light")(1);
 const directLight = changeState("light")(5);
 const pureSunlight = changeState("light")(10);
 
-export {
+const plant = stateControl;
+
+module.exports = {
     feed,
-    blueFood,
-    greenFood,
     hydrate,
-    superWater,
-    pureWater,
     givelight,
-    directLight,
-    pureSunlight
+    plant
 }
