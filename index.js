@@ -1,31 +1,20 @@
 // import './css/fonts.css';
 // import './css/styles.css';
-const { feed, hydrate, givelight, plant } = require('./plant');
+const { red_plant, feedPlant, feed } = require('./plant');
 
 // Refer variables from .env => ${process.env.varName}
 
-const plantA = plant;
-plantA(feed);
-plantA(hydrate);
-plantA(givelight);
-console.log("plantA", plantA());
+const a = red_plant("A$$word");
 
-const plantC = plant;
-plantC(feed);
-plantC(hydrate);
-plantC(givelight);
-console.log("plantC", plantC());
+console.log(a);
+console.log(b);
+console.log(c);
 
-let plantB = plant();
-plantB = feed(plantB);
-plantB = hydrate(plantB);
-plantB = givelight(plantB);
-console.log("plantB", plantB);
+const a_fed = feed(a);
+console.log(a_fed);
 
-console.log(plantA === plantC);
-console.log(plantA() === plantC());
+const a_caneat = feedPlant(feed)(a_fed);
+console.log(a_caneat);
 
-plantA(feed);
-plantC(hydrate);
-console.log("plantA fed", plantA())
-console.log("plantC hydrate", plantC())
+const a_fed2 = a_caneat.feed();
+console.log(a_fed2);
