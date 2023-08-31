@@ -1,4 +1,4 @@
-const storeState = () => {
+/* const storeState = () => {
     let currentState = {};
     return (stateChangeFunction = state => state) => {
         const newState = stateChangeFunction(currentState);
@@ -6,14 +6,11 @@ const storeState = () => {
         return newState;
     }
 }
-const stateControl = storeState();
+const stateControl = storeState(); */
 
 const changeState = (prop) => (value) => (state) => ({
     ...state,
     [prop]: (state[prop] || 0) + value
 });
 
-module.exports = {
-    stateControl,
-    changeState
-}
+module.exports = { changeState }
