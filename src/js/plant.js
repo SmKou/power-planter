@@ -38,11 +38,11 @@ const getTrait = color_pattern => {
         case 'red':
             return -2;
         case 'yellow':
-            return 2;
+            return -1;
         case 'blue':
             return -3;
         default:
-            return -1;
+            return -2;
     }
 }
 
@@ -91,16 +91,9 @@ const color_patterns = color_pattern => color => pattern => ({
     decrement: () => changeQuality(feed, hydrate, giveLight)(getTrait(color_pattern))(this)
 })
 
-const plants = () => {
-    const colors = ['red', 'yellow', 'blue'];
-    const patterns = ['plain', 'spotted', 'striped'];
-
-    const randColor = Math.random() * colors.length;
-    const randPattern = Math.random() * patterns.length;
-    const randColorPattern = randPattern == 'plain' ? -1 : Math.random() * colors.length;
-    
+const plants = randColorPattern => randColor => randPattern => {
     const state = [
-        color_patterns(colors[randColorPattern])(colors[randColor])(patterns[randPattern])
+        color_patterns(randColorPattern)(randColor)(randPattern)
     ];
     state[0] = feed(state[0].fed)(state[0]);
     state[0] = hydrate(state[0].hydrated)(state[0]);
@@ -138,4 +131,27 @@ const plants = () => {
     };
 }
 
-module.exports = { plants }
+const createPlants = () => {
+    const colors = ['red', 'yellow', 'blue'];
+    const patterns = ['plain', 'spotted', 'striped'];
+    const seeds = generate(3, 0, Array(3));
+    for (let i = 0; i < seeds.length; i++) 
+        seeds[i] = plants(colors[seeds[i][0]])(colors[seeds[i][1]])(patterns[seeds[i][2]]);
+    return seeds;
+}
+
+const generate = (n, i, arr) => {
+    if (i >= n)
+        return arr;
+    const randColor = Math.random() * colors.length;
+    const randPattern = Math.random() * patterns.length;
+    const randColorPattern = randPattern == 'plain' ? -1 : Math.random() * colors.length;
+    const arrangement = [randColorPattern, randColor, randPattern];
+    for (let j = 0; j < i; ++j)
+        if (arr[j].toString() == arrangement.toString())
+            return generate(n, i, arr);
+    arr[i] = arrangement;
+    return generate(n, i + 1, arr);
+}
+
+module.exports = { createPlants }

@@ -8,9 +8,10 @@
 <body>
     <header>
         <h1>Power Planter</h1>
+        <span class="notifications"></span>
     </header>
     <main>
-        <div id="plant-1">
+        <div id="plant-1" class="plant hidden">
             <h3><input type="text" placeholder="Name this plant" id="name-1"></h3>
             <ul>
                 <li>Type: <span class="type-1"></span></li>
@@ -27,7 +28,7 @@
                 <button class="give-light" id="synthesize-1">Give light to <span class="name-1"></span></button>
             </div>
         </div>
-        <div id="plant-2">
+        <div id="plant-2" class="plant hidden">
             <h3><input type="text" placeholder="Name this plant" id="name-2"></h3>
             <ul>
                 <li>Type: <span class="type-2"></span></li>
@@ -44,7 +45,7 @@
                 <button class="give-light" id="synthesize-2">Give light to <span class="name-2"></span></button>
             </div>
         </div>
-        <div id="plant-3">
+        <div id="plant-3" class="plant hidden">
             <h3><input type="text" placeholder="Name this plant" id="name-3"></h3>
             <ul>
                 <li>Type: <span class="type-3"></span></li>
@@ -85,5 +86,10 @@
         <h3>Watch out!</h3>
         <p>Plants die when any one of their soil, water, or light levels reach a minimum of 0 or a maximum of 20, and if their health is too low, they will not grow.</p>
     </aside>
+    <footer>
+        <button id="reset" class="hidden">Reset</button>
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
+    </footer>
 </body>
 </html>
