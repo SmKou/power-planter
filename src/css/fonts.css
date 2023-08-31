@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('./fonts/BebasNeue-Light.eot');
+    src: url('./fonts/BebasNeue-Light.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/BebasNeue-Light.woff2') format('woff2'),
+        url('./fonts/BebasNeue-Light.woff') format('woff'),
+        url('./fonts/BebasNeue-Light.ttf') format('truetype'),
+        url('./fonts/BebasNeue-Light.svg#BebasNeue-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Book';
+    src: url('./fonts/BebasNeue-Book.eot');
+    src: url('./fonts/BebasNeue-Book.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/BebasNeue-Book.woff2') format('woff2'),
+        url('./fonts/BebasNeue-Book.woff') format('woff'),
+        url('./fonts/BebasNeue-Book.ttf') format('truetype'),
+        url('./fonts/BebasNeue-Book.svg#BebasNeue-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('./fonts/BebasNeue-Bold.eot');
+    src: url('./fonts/BebasNeue-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/BebasNeue-Bold.woff2') format('woff2'),
+        url('./fonts/BebasNeue-Bold.woff') format('woff'),
+        url('./fonts/BebasNeue-Bold.ttf') format('truetype'),
+        url('./fonts/BebasNeue-Bold.svg#BebasNeue-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('./fonts/BebasNeue-Thin.eot');
+    src: url('./fonts/BebasNeue-Thin.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/BebasNeue-Thin.woff2') format('woff2'),
+        url('./fonts/BebasNeue-Thin.woff') format('woff'),
+        url('./fonts/BebasNeue-Thin.ttf') format('truetype'),
+        url('./fonts/BebasNeue-Thin.svg#BebasNeue-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('./fonts/BebasNeue-Regular.eot');
+    src: url('./fonts/BebasNeue-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/BebasNeue-Regular.woff2') format('woff2'),
+        url('./fonts/BebasNeue-Regular.woff') format('woff'),
+        url('./fonts/BebasNeue-Regular.ttf') format('truetype'),
+        url('./fonts/BebasNeue-Regular.svg#BebasNeue-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('./fonts/LeagueSpartan-Bold.eot');
+    src: url('./fonts/LeagueSpartan-Bold.eot?iefix') format('embedded-opentype'),
+        url('./fonts/LeagueSpartan-Bold.woff2') format('woff2'),
+        url('./fonts/LeagueSpartan-Bold.woff') format('woff'),
+        url('./fonts/LeagueSpartan-Bold.ttf') format('truetype'),
+        url('./fonts/LeagueSpartan-Bold.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('./fonts/Muli-Light.eot');
+    src: url('./fonts/Muli-Light.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Muli-Light.woff2') format('woff2'),
+        url('./fonts/Muli-Light.woff') format('woff'),
+        url('./fonts/Muli-Light.ttf') format('truetype'),
+        url('./fonts/Muli-Light.svg#Muli-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('./fonts/Muli-Bold.eot');
+    src: url('./fonts/Muli-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Muli-Bold.woff2') format('woff2'),
+        url('./fonts/Muli-Bold.woff') format('woff'),
+        url('./fonts/Muli-Bold.ttf') format('truetype'),
+        url('./fonts/Muli-Bold.svg#Muli-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('./fonts/Muli-Regular.eot');
+    src: url('./fonts/Muli-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Muli-Regular.woff2') format('woff2'),
+        url('./fonts/Muli-Regular.woff') format('woff'),
+        url('./fonts/Muli-Regular.ttf') format('truetype'),
+        url('./fonts/Muli-Regular.svg#Muli-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('./fonts/NunitoSans-Regular.eot');
+    src: url('./fonts/NunitoSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/NunitoSans-Regular.woff2') format('woff2'),
+        url('./fonts/NunitoSans-Regular.woff') format('woff'),
+        url('./fonts/NunitoSans-Regular.ttf') format('truetype'),
+        url('./fonts/NunitoSans-Regular.svg#NunitoSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('./fonts/NunitoSans-Bold.eot');
+    src: url('./fonts/NunitoSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/NunitoSans-Bold.woff2') format('woff2'),
+        url('./fonts/NunitoSans-Bold.woff') format('woff'),
+        url('./fonts/NunitoSans-Bold.ttf') format('truetype'),
+        url('./fonts/NunitoSans-Bold.svg#NunitoSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('./fonts/NunitoSans-Light.eot');
+    src: url('./fonts/NunitoSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/NunitoSans-Light.woff2') format('woff2'),
+        url('./fonts/NunitoSans-Light.woff') format('woff'),
+        url('./fonts/NunitoSans-Light.ttf') format('truetype'),
+        url('./fonts/NunitoSans-Light.svg#NunitoSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('./fonts/Oswald-Light.eot');
+    src: url('./fonts/Oswald-Light.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Oswald-Light.woff2') format('woff2'),
+        url('./fonts/Oswald-Light.woff') format('woff'),
+        url('./fonts/Oswald-Light.ttf') format('truetype'),
+        url('./fonts/Oswald-Light.svg#Oswald-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('./fonts/Oswald-Medium.eot');
+    src: url('./fonts/Oswald-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Oswald-Medium.woff2') format('woff2'),
+        url('./fonts/Oswald-Medium.woff') format('woff'),
+        url('./fonts/Oswald-Medium.ttf') format('truetype'),
+        url('./fonts/Oswald-Medium.svg#Oswald-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('./fonts/Oswald-ExtraLight.eot');
+    src: url('./fonts/Oswald-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Oswald-ExtraLight.woff2') format('woff2'),
+        url('./fonts/Oswald-ExtraLight.woff') format('woff'),
+        url('./fonts/Oswald-ExtraLight.ttf') format('truetype'),
+        url('./fonts/Oswald-ExtraLight.svg#Oswald-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('./fonts/Oswald-Regular.eot');
+    src: url('./fonts/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Oswald-Regular.woff2') format('woff2'),
+        url('./fonts/Oswald-Regular.woff') format('woff'),
+        url('./fonts/Oswald-Regular.ttf') format('truetype'),
+        url('./fonts/Oswald-Regular.svg#Oswald-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('./fonts/Oswald-SemiBold.eot');
+    src: url('./fonts/Oswald-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Oswald-SemiBold.woff2') format('woff2'),
+        url('./fonts/Oswald-SemiBold.woff') format('woff'),
+        url('./fonts/Oswald-SemiBold.ttf') format('truetype'),
+        url('./fonts/Oswald-SemiBold.svg#Oswald-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('./fonts/Oswald-Bold.eot');
+    src: url('./fonts/Oswald-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Oswald-Bold.woff2') format('woff2'),
+        url('./fonts/Oswald-Bold.woff') format('woff'),
+        url('./fonts/Oswald-Bold.ttf') format('truetype'),
+        url('./fonts/Oswald-Bold.svg#Oswald-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ovo';
+    src: url('./fonts/Ovo.eot');
+    src: url('./fonts/Ovo.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Ovo.woff2') format('woff2'),
+        url('./fonts/Ovo.woff') format('woff'),
+        url('./fonts/Ovo.ttf') format('truetype'),
+        url('./fonts/Ovo.svg#Ovo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ra Mono';
+    src: url('./fonts/RaMonoRegular.eot');
+    src: url('./fonts/RaMonoRegular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/RaMonoRegular.woff2') format('woff2'),
+        url('./fonts/RaMonoRegular.woff') format('woff'),
+        url('./fonts/RaMonoRegular.ttf') format('truetype'),
+        url('./fonts/RaMonoRegular.svg#RaMonoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
