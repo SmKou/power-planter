@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Planter</title>
+</head>
+<body>
+    <header>
+        <h1>Power Planter</h1>
+    </header>
+    <main>
+        <div id="plant-1">
+            <h3><input type="text" placeholder="Name this plant" id="name-1"></h3>
+            <ul>
+                <li>Type: <span class="type-1"></span></li>
+                <li>Color: <span class="color-1"></span></li>
+                <li>Stage: <span class="stage-1"></span></span></li>
+                <li>Health: <span class="health-1"></span></li>
+            </ul>
+            <div class="grid">
+                <div class="stat">Soil: <span class="soil-1"></span></div>
+                <button class="feed" id="feed-1">Feed <span class="name-1"></span></button>
+                <div class="stat">Water: <span class="water-1"></span></div>
+                <button class="hydrate" id="hydrate-1">Hydrate <span class="name-1"></span></button>
+                <div class="stat">Light: <span class="light-1"></span></div>
+                <button class="give-light" id="synthesize-1">Give light to <span class="name-1"></span></button>
+            </div>
+        </div>
+        <div id="plant-2">
+            <h3><input type="text" placeholder="Name this plant" id="name-2"></h3>
+            <ul>
+                <li>Type: <span class="type-2"></span></li>
+                <li>Color: <span class="color-2"></span></li>
+                <li>Stage: <span class="stage-2"></span></span></li>
+                <li>Health: <span class="health-2"></span></li>
+            </ul>
+            <div class="grid">
+                <div class="stat">Soil: <span class="soil-2"></span></div>
+                <button class="feed" id="feed-2">Feed <span class="name-2"></span></button>
+                <div class="stat">Water: <span class="water-2"></span></div>
+                <button class="hydrate" id="hydrate-2">Hydrate <span class="name-2"></span></button>
+                <div class="stat">Light: <span class="light-2"></span></div>
+                <button class="give-light" id="synthesize-2">Give light to <span class="name-2"></span></button>
+            </div>
+        </div>
+        <div id="plant-3">
+            <h3><input type="text" placeholder="Name this plant" id="name-3"></h3>
+            <ul>
+                <li>Type: <span class="type-3"></span></li>
+                <li>Color: <span class="color-3"></span></li>
+                <li>Stage: <span class="stage-3"></span></span></li>
+                <li>Health: <span class="health-3"></span></li>
+            </ul>
+            <div class="grid">
+                <div class="stat">Soil: <span class="soil-3"></span></div>
+                <button class="feed" id="feed-3">Feed <span class="name-3"></span></button>
+                <div class="stat">Water: <span class="water-3"></span></div>
+                <button class="hydrate" id="hydrate-3">Hydrate <span class="name-3"></span></button>
+                <div class="stat">Light: <span class="light-3"></span></div>
+                <button class="give-light" id="synthesize-3">Give light to <span class="name-3"></span></button>
+            </div>
+        </div>
+    </main>
+    <aside>
+        <h3>What plant might it be?</h3>
+        <p>There are blue-spotted red plants, plain yellow plants, and blue-striped blue plants. The primary color of a plant determines its needs, while its pattern determines how much nutrients it can take at a time, and if a plant has a pattern, the color of its pattern determines if it will be fragile, stable or robust. This means how fast their levels drop. The challenge here is caring for your plants until they are fully grown, revealing their colors and patterns.</p>
+        <p><strong>Primary Colors</strong></p>
+        <ul>
+            <li>Red plants prefer to be fed moderately, to be hydrated a lot and to be given little light.</li>
+            <li>Blue plants prefer to be fed a lot, to be hydrated moderately, and to be given little light.</li>
+            <li>Yellow plants prefer to be fed a little, to be hydrated moderately, and to be given a lot of light.</li>
+        </ul>
+        <p><strong>Patterns</strong></p>
+        <ul>
+            <li>Spotted plants absorb little nutrients when fed, hydrated or given light.</li>
+            <li>Striped plants absorb a lot of nutrients when fed, hydrated or given light.</li>
+        </ul>
+        <p><strong>Colors of Patterns</strong></p>
+        <ul>
+            <li>Plants that are plain or with a red pattern are stable.</li>
+            <li>Plants with a yellow pattern are robust, losing nutrients slower than stable plants.</li>
+            <li>Plants with a blue pattern are fragile, losing nutrients faster than stable plants.</li>
+        </ul>
+        <h3>Watch out!</h3>
+        <p>Plants die when any one of their soil, water, or light levels reach a minimum of 0 or a maximum of 20, and if their health is too low, they will not grow.</p>
+    </aside>
+</body>
+</html>

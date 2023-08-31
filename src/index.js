@@ -3,3 +3,7 @@
 const { plants } = require('./js/plant');
 
 // Refer variables from .env => ${process.env.varName}
+
+function update() {
+    
+}
