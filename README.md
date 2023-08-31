@@ -4,7 +4,7 @@ By: Stella Marie
 
 Template repo for Node.js project with Webpack, ESLint, Babel, and Jest.
 
-View on [Github Pages](https://username.github.io/repo-name/)
+View on [Github Pages](https://smkou.github.io/power-planter/)
 
 ## **Technologies Used**
 
@@ -19,22 +19,27 @@ View on [Github Pages](https://username.github.io/repo-name/)
 
 ## **Description**
 
-Node is a template repo for a basic Node.js project, outfitted with a bundler, linter, javascript converter, compiler for typescript, and test package. The file structure consists of the config files in the root, along with package.json for setup, and the folders, _ _ tests _ _ containing test files, credits, and src containing the development files. There is one sample test file in the tests folder, whereas src consists of assets, css and js with index.js and index.html.
+Power Planter is a numbers game, where a player cares for three plants, feeding, hydrating and giving them light. Every plant has a name, type, color(s) and health and each type of plant has a different reaction to food, water and light, as well as needs for food, water and light, and rate of growth. Plants will wilt over time unless cared for and if their health reaches zero, they will die. If a player cares for a plant long enough successfully, the type will be revealed in their color(s).
 
-The credit folder is a personal preference for keeping track of the origins of resources, particularly their READMEs and attribution details, often consisting of author or organization name, url, and title of the resource. If the resource was renamed, include the rename to attributions.
+### Details
 
-When the build command is run, a dist directory will be created, and when the start command is run, launching a preview of the site, both a dist and coverage directories will be created. The dist will contain the production files for the website, app or api, while the coverage will save the results of running the test suites in jest.
+Plant
+- name
+- type
+- color
+- health
 
-Assets is for images and fonts. It contains two subdirectories, img and fonts, both containing samples, the latter possessing a selection: Bebas Neue, League Spartan, Muli, Nunito Sans, Oswald, Ovo, and Ra Mono. All of these fonts are either public domain or open source. Css is for stylesheets, and contains two sample files, fonts.css and styles.css. The present styles in the latter are derived from Skeleton 2.0.4 by Dave Gamache. Js is for interaction and functionality, and has two subdirectories, bs for business logic and ui for user interface logic.
+Types:
+- Color: red, yellow, blue
+- Pattern: plain, spotted, striped
+
+Metrics:
+- food, water, and light
+- growth (how many turns before )
+
+Player has three randomly generated plants. They can see plant stats for colors and patterns. Their plants will be of tertiary colors and will transition over time as they are cared for to reveal patterns and their primary colors.
 
 ## **Complete Setup**
-
-- Navigate to main page of repo
-- Above file list, click **Use this template**
-- Dropdown: select **Create a new repository**
-- Fill out create repo form
-
-### **Local Setup**
 
 - Navigate to your new repo
 - Clone it
