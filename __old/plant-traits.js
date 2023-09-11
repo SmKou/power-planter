@@ -45,7 +45,7 @@ const traits = {
                 return -2;
         }
     },
-    changeQuantity: (fn, gn, hn) => val => state => fn(val)(gn(val)(hn(val)(state)))
+    changeQuality: (fn, gn, hn) => val => state => fn(val)(gn(val)(hn(val)(state)))
 }
 
 export default traits;
