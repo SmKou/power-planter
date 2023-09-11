@@ -20,6 +20,8 @@ function update() {
         requestAnimationFrame(update);
 }
 
-document.getElementById("play").addEventListener()
-document.getElementById("pause").addEventListener()
+document.getElementById("play").addEventListener('click', start)
+document.getElementById("pause").addEventListener('click', () => {
+    state(changeState("status")(0))
+})
 document.getElementById("reset").addEventListener()

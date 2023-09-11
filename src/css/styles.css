@@ -209,5 +209,7 @@ pre, code { background: #CCC }
     margin: 0 auto;
 }
 
-/* Messages and Notices
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+header {
+    width: 100%;
+    margin: 0;
+}

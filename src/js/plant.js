@@ -1,60 +1,11 @@
-const { changeState } = require('./state');
-
-const feed = changeState("soil");
-const hydrate = changeState("water");
-const giveLight = changeState("light");
-
-const getHighIdeal = () => Math.random() * 4 + 12
-const getMidIdeal = () => Math.random() * 4 + 8
-const getLowIdeal = () => Math.random() * 4 + 4
-
-const getColor = color => {
-    const option = Math.random() * 2 - 1;
-    if (option > 0)
-        return color_progressions[color][1]
-    else
-        return color_progressions[color][0]
-}
-
-const color_progressions = {
-    'red': [
-        [magenta, vermillion],
-        [purple, orange]
-    ],
-    'yellow': [
-        [amber, chartreuse],
-        [orange, green]
-    ],
-    'blue': [
-        [violet, teal],
-        [purple, green]
-    ]
-}
-
-const getTrueColor = color_pattern => color => pattern => pattern != "" ? `${color_pattern}-${pattern} ${color}` : `${pattern} ${color}`
-
-const getTrait = color_pattern => {
-    switch (color_pattern) {
-        case 'red':
-            return -2;
-        case 'yellow':
-            return -1;
-        case 'blue':
-            return -3;
-        default:
-            return -2;
-    }
-}
-
-const changeQuality = (fn, gn, hn) => val => state => fn(val)(gn(val)(hn(val)(state)))
-
-/* Plant Composition */
+const { changeState } = require('./state')
+const { traits } = require('./plant-traits');
 
 const plant = ([food, water, light]) => (state = {}) => ({
     ...state,
-    eat: () => feed(food)(this),
-    drink: () => hydrate(water)(this),
-    synthesize: () => giveLight(light)(this)
+    eat: () => traits.feed(food)(this),
+    drink: () => traits.hydrate(water)(this),
+    synthesize: () => traits.giveLight(light)(this)
 })
 
 const patterns = {
@@ -66,38 +17,36 @@ const patterns = {
 const colors = {
     red: pattern => ({
         ...patterns[pattern],
-        fed: getMidIdeal(),
-        hydrated: getHighIdeal(),
-        synthesized: getLowIdeal()
+        fed: traits.midIdeal(),
+        hydrated: traits.highIdeal(),
+        synthesized: traits.lowIdeal()
     }),
     yellow: pattern => ({
         ...patterns[pattern],
-        fed: getLowIdeal(),
-        hydrated: getMidIdeal(),
-        synthesized: getHighIdeal()
+        fed: traits.lowIdeal(),
+        hydrated: traits.midIdeal(),
+        synthesized: traits.highIdeal()
     }),
     blue: pattern => ({
         ...patterns[pattern],
-        fed: getHighIdeal(),
-        hydrated: getMidIdeal(),
-        synthesized: getLowIdeal()
+        fed: traits.highIdeal(),
+        hydrated: traits.midIdeal(),
+        synthesized: traits.lowIdeal()
     })
 }
 
 const color_patterns = color_pattern => color => pattern => ({
     ...colors[color](pattern),
-    color: getColor(color),
-    true_color: getTrueColor(color_pattern)(color)(pattern),
-    decrement: () => changeQuality(feed, hydrate, giveLight)(getTrait(color_pattern))(this)
+    color: traits.color(color),
+    true_color: traits.trueColor(color_pattern)(color)(pattern),
+    decrement: () => traits.changeQuality(traits.feed, traits.hydrate, traits.giveLight)(traits.getTrait(color_pattern))(this)
 })
 
 const plants = randColorPattern => randColor => randPattern => {
-    const state = [
-        color_patterns(randColorPattern)(randColor)(randPattern)
-    ];
-    state[0] = feed(state[0].fed)(state[0]);
-    state[0] = hydrate(state[0].hydrated)(state[0]);
-    state[0] = synthesize(state[0].synthesized)(state[0]);
+    const state = [ color_patterns(randColorPattern)(randColor)(randPattern) ];
+    state[0] = traits.feed(state[0].fed)(state[0]);
+    state[0] = traits.hydrate(state[0].hydrated)(state[0]);
+    state[0] = traits.giveLight(state[0].synthesized)(state[0]);
 
     return {
         ...state[0],
@@ -131,15 +80,6 @@ const plants = randColorPattern => randColor => randPattern => {
     };
 }
 
-const createPlants = () => {
-    const colors = ['red', 'yellow', 'blue'];
-    const patterns = ['plain', 'spotted', 'striped'];
-    const seeds = generate(3, 0, Array(3));
-    for (let i = 0; i < seeds.length; i++) 
-        seeds[i] = plants(colors[seeds[i][0]])(colors[seeds[i][1]])(patterns[seeds[i][2]]);
-    return seeds;
-}
-
 const generate = (n, i, arr) => {
     if (i >= n)
         return arr;
@@ -154,4 +94,13 @@ const generate = (n, i, arr) => {
     return generate(n, i + 1, arr);
 }
 
-module.exports = { createPlants }
+const createPlants = () => {
+    const colors = ['red', 'yellow', 'blue'];
+    const patterns = ['plain', 'spotted', 'striped'];
+    const seeds = generate(3, 0, Array(3));
+    for (let i = 0; i < seeds.length; i++) 
+        seeds[i] = plants(colors[seeds[i][0]])(colors[seeds[i][1]])(patterns[seeds[i][2]]);
+    return seeds;
+}
+
+export default createPlants;
