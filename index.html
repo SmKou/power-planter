@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700&family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Power Planter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Power Planter</h1>
+        <button id="expand-aside" type="button"><span class="mobile-no-display">Expand </span>Plant Wiki</button>
+    </header>
+    <main id="app">
+        <section class="plant plant-1">
+            <div class="row id">
+                <h2>Plant: <input class="name"></h2>
+                <div class="rounds"></div>
+            </div>
+            <div class="row health">
+                <h3>Health:</h3>
+                <div class="status"></div>
+                <div class="percent"></div>
+            </div>
+            <div class="row stage">
+                <h3>Stage:</h3>
+                <div class="number"></div>
+                <div class="name"></div>
+            </div>
+            <div class="col nutrients">
+                <h3>Nutrients</h3>
+                <table>
+                    <tbody>
+                        <tr class="soil">
+                            <th>Soil</th>
+                            <td><span class="current"></span></td>
+                            <td><button class="gain">Feed</button></td>
+                        </tr>
+                        <tr class="water">
+                            <th>Water</th>
+                            <td><span class="current"></span></td>
+                            <td><button class="gain">Hydrate</button></td>
+                        </tr>
+                        <tr class="light">
+                            <th>Light</th>
+                            <td><span class="current"></span></td>
+                            <td><button class="gain">Give Light</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row description"></div>
+        </section>
+        <section class="plant plant-2">
+            <div class="row">
+                <h2>Plant: <input class="name"></h2>
+                <div class="rounds"></div>
+            </div>
+            <div class="row health">
+                <h3>Health:</h3>
+                <div class="status"></div>
+                <div class="percent"></div>
+            </div>
+            <div class="row stage">
+                <h3>Stage:</h3>
+                <div class="number"></div>
+                <div class="name"></div>
+            </div>
+            <div class="col nutrients">
+                <h3>Nutrients</h3>
+                <table>
+                    <tbody>
+                        <tr class="soil">
+                            <th>Soil</th>
+                            <td><span class="current"></span></td>
+                            <td><button class="gain">Feed</button></td>
+                        </tr>
+                        <tr class="water">
+                            <th>Water</th>
+                            <td><span class="current"></span></td>
+                            <td><button class="gain">Hydrate</button></td>
+                        </tr>
+                        <tr class="light">
+                            <th>Light</th>
+                            <td><span class="current"></span></td>
+                            <td><button class="gain">Give Light</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row description"></div>
+        </section>
+        <section class="plant plant-3">
+            <div class="row">
+                <h2>Plant: <input class="name"></h2>
+                <div class="rounds"></div>
+            </div>
+            <div class="row health">
+                <h3>Health:</h3>
+                <div class="status"></div>
+                <div class="percent"></div>
+            </div>
+            <div class="row stage">
+                <h3>Stage:</h3>
+                <div class="number"></div>
+                <div class="name"></div>
+            </div>
+            <div class="col nutrients">
+                <h3>Nutrients</h3>
+                <table>
+                    <tbody>
+                        <tr class="soil">
+                            <th>Soil</th>
+                            <td><span class="current"></span></td>
+                            <td><button class="gain">Feed</button></td>
+                        </tr>
+                        <tr class="water">
+                            <th>Water</th>
+                            <td><span class="current"></span></td>
+                            <td><button class="gain">Hydrate</button></td>
+                        </tr>
+                        <tr class="light">
+                            <th>Light</th>
+                            <td><span class="current"></span></td>
+                            <td><button class="gain">Give Light</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row description"></div>
+        </section>
+        <div class="game-controls expand">
+            <div class="controls">
+                <button id="reload-btn">Reload</button>
+                <button id="recover-btn">Recover <span class="rec-opp-n"></span></button>
+            </div>
+            <button id="toggle-controls" class="collapse"></button>
+        </div>
+    </main>
+    <aside>
+        <div class="flex justify-between heading">
+            <h1>Power Planter</h1>
+            <button id="collapse-aside">Collapse</button>
+        </div>
+        <div class="container">
+            <p>Tend to three plants, keeping track of their stats as they grow. Feed them, hydrate them, and give them light to maintain their ideal levels, and raise them to reveal their colors, patterns and and the colors of those patterns, and petal shapes, all of which affect a plant's capacity to grow. Should any of a plant's stats reach 0 or exceed the maximum, they die, and if left in wilting condition for too long, a plant will die.</p>
+            <p>Do your best to keep your plants as well as okay. If their condition is poor, they will only become more and more eratic as they grow .</p>
+            <p>Type: Numbers game</p>
+            <h2>What Plant is it?</h2>
+            <details>
+                <summary>Color</summary>
+                <p>The primary color of a plant reflects its relative ideal amounts of different nutrients. Its ideal can fall into one of three categories: low, mid, and high. While it's recommended to keep their levels within a short range of their ideals, plants can differ in their tolerance.</p>
+                <ul>
+                    <li><strong>Red</strong> prefers a mid level of soil, high level of water, and low level of light.</li>
+                    <li><strong>Yellow</strong> prefers a low level of soil, mid level of water, and high level of light.</li>
+                    <li><strong>Blue</strong> prefers a high level of soil, low level of water, and mid level of light.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Pattern</summary>
+                <p>The pattern of a plant reflects how much nutrients it tends to absorb when fed, hydrated or synthesized. While this amount deviates by nutrient, there is a given range for the pattern that the amount will fall in. Be aware that this range is increased with each state of growth.</p>
+                <ul>
+                    <li><strong>Plain</strong> tends to absorb little nutrients.</li>
+                    <li><strong>Spotted</strong> tends to absorb some nutrients.</li>
+                    <li><strong>Striped</strong> tends to absorb a lot of nutrients.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Pattern Color</summary>
+                <p>The color of a plant's pattern reflects how much of its nutrients it uses up every few seconds. Like its pattern, the amount deviates by nutrient and the range increases with each state of growth.</p>
+                <ul>
+                    <li><strong>Red</strong> tends to use a some nutrients for energy.</li>
+                    <li><strong>Yellow</strong> tends to use a lot of nutrients for energy.</li>
+                    <li><strong>Blue</strong> tends to use a little nutrients for energy.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Petal shape</summary>
+                <p>The shape of a plant's flower petals reflects its tolerance, meaning how the difference between its ideal levels and current levels affect its condition. This will not be confirmed until a plant's final stage of growth, when it flowers.</p>
+                <ul>
+                    <li><strong>Triangular petals</strong> have a low tolerance.</li>
+                    <li><strong>Circular petals</strong> have a mid tolerance.</li>
+                    <li><strong>Diamond petals</strong> have a high tolerance.</li>
+                </ul>
+            </details>
+            <hr>
+            <div class="flex justify-end btns">
+                <button id="expand-wiki">Open All</button>
+                <button id="collapse-wiki">Close All</button>
+            </div>
+        </div>
+    </aside>
+    <script src="index.js"></script>
+</body>
+</html>

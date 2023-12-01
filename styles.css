@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar { display: none }
+
+html { font-size: 62.5% }
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    font-size: 1.5em;
+    color: #000;
+    line-height: 1.1;
+}
+
+p,
+li { font-size: 1.6rem }
+
+li { margin-bottom: 0.8rem }
+
+button { cursor: pointer }
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.justify-between { justify-content: space-between }
+.justify-end { justify-content: flex-end }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem 0;
+    background: #301934;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+header button {
+    margin: 0 1.2rem;
+    padding: 0.8rem 1.2rem;
+    border: 0.2rem solid #eff;
+    border-radius: 0.8rem;
+    color: #eff;
+    background: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+header button.dark {
+    border-color: #301934;
+    color: #301934;
+}
+
+header button:hover {
+    border-color: #fff;
+    color: #fff;
+    background: #fff3;
+}
+
+header button.dark:hover {
+    border-color: #222;
+    color: #222;
+    background: #2223;
+}
+
+h1 { 
+    margin-left: 1.8rem;
+    font-family: 'Ubuntu';
+}
+
+header h1 { color: #fff }
+aside h1 { color: #222 }
+
+#toggle-aside { margin-right: 1.2rem }
+
+main {
+    width: 100%;
+    padding-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 95%;
+    max-width: 32rem;
+    margin: 1.2rem;
+    border: 0.1rem solid black;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    width: 100%;
+    padding: 0.6rem 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.row.id {
+    justify-content: space-between;
+}
+
+.col {
+    width: 100%;
+    padding: 0.6rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+tr th,
+tr td {
+    text-align: left;
+}
+
+tr th { width: 30% }
+tr td:first-of-type { width: 20% }
+tr td:last-of-type { width: 50% }
+
+table button { width: 100% }
+
+.game-controls {
+    width: 95%;
+    max-width: 101.4rem;
+    padding: 1.2rem 0;
+    border: 0.1rem solid #000;
+    border-radius: 0.8rem;
+    background: #0001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-controls button {
+    margin: 0 1.2rem;
+    padding: 0.8rem 1.6rem;
+    border-color: #0003;
+    border-radius: 0.8rem;
+    color: #0003;
+    cursor: pointer;
+}
+
+.game-controls button:hover {
+    border-color: #301934;
+    color: #301934;
+    background: #fff;
+}
+
+@media screen and (max-width: 550px) {
+    .game-controls {
+        position: fixed;
+        bottom: 1.2rem;
+        right: 1.2rem;
+    }
+
+    .game-controls.expand .controls {
+        width: auto
+    }
+
+    .game-controls.collapse .controls {
+        width: 0
+    }
+}
+
+aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 42rem;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-top: 9rem;
+    padding-bottom: 2rem;
+    border-left: 0.1rem solid black;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: all 0.3s;
+}
+
+.expand {
+    transform: translateY(0%)
+}
+
+.heading {
+    width: 100%;
+    background: #0003;
+}
+
+#collapse-aside {
+    margin-right: 1.2rem;
+    padding: 1.2rem;
+    border: 0.1rem solid #222;
+    border-radius: 0.6rem;
+    color: #222;
+    background: transparent;
+    cursor: pointer;
+}
+
+#collapse-aside:hover {
+    border-color: #301934;
+    color: #301934;
+    background: #30193430;
+}
+
+.container {
+    width: 85%;
+}
+
+details {
+    margin: 1.2rem 0;
+    padding: 0.6rem 1.2rem;
+    border: 0.1rem solid #222;
+    border-radius: 0.6rem;
+}
+
+details p { 
+    text-align: justify;
+    line-height: 1.1;
+}
+
+.btns button {
+    margin: 0 1.2rem;
+    padding: 1.2rem;
+    border: 0.1rem solid #222;
+    border-radius: 0.6rem;
+    color: #222;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btns button:last-of-type { margin-right: 0 }
+
+.btns button {
+    border-color: #301934;
+    color: #301934;
+    background: #30193430;
+}
